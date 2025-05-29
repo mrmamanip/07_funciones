@@ -36,7 +36,14 @@ int main() {
     	}
     	
     	cout << "Desea generar otra serie y suma? (s/n): ";
-    	cin >> option;
+    	
+    	do {
+    		cin >> option;
+    		if (option != 's' && option != 'S' && option != 'n' && option != 'N'){
+    			cout << "Ingrese SOLO letras (s/n): ";
+			}
+		} while (option != 's' && option != 'S' && option != 'n' && option != 'N');
+    	
 	} while (option == 's' || option == 'S');
 	
 	cout<<"Programa finalizado.";
