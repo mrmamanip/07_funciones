@@ -46,7 +46,7 @@ int main() {
     	    cout << num1 << " y " << num2 << " no son numeros amigos." << endl;
     		}
 		}
-    	
+    	 
     	cout << "Desea volver a corroborar si dos numeros son amigos? (s/n):" << endl;
     	do {
     		cin >> option;

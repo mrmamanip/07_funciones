@@ -39,7 +39,7 @@ int main(){
     	}
     	
     	cout << "Desea volver a corroborar si dos numeros son amigos? (s/n): ";
-    	
+    	 
     	do {
     		cin >> option;
     		
