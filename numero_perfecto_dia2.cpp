@@ -20,23 +20,36 @@ int SumaDeDivisores(int n) {
 int main(){
 	
 	int num;
-
-	cout << "Ingrese el numero que se desea corroborar si es perfecto: ";
-	cin >> num;
-
-	if ( num < 0 ) {
-		cout<<"Un numero perfecto no puede ser negativo.";
-		return 0;
-	} else if ( num == 0 ) {
-		cout << "0 no es un numero perfecto.";
-		return 0;
-	}
+	char option;
+	do {
+		cout << "Ingrese el numero que se desea corroborar si es perfecto: ";
+		cin >> num;
 	
-	if (SumaDeDivisores(num)) {
-        cout << num << " es un numero perfecto.";
-    } else {
-        cout << num << " no es un numero perfecto.";
-    }
+		if ( num < 0 ) {
+			cout<<"Un numero perfecto no puede ser negativo.";
+		} else if ( num == 0 ) {
+			cout << "0 no es un numero perfecto.";
+		} else {
+	
+			if (SumaDeDivisores(num)) {
+        		cout << num << " es un numero perfecto." << endl;
+    		} else {
+    		    cout << num << " no es un numero perfecto." << endl;
+    		}
+    	}
+    	
+    	cout << "Desea volver a corroborar si dos numeros son amigos? (s/n): ";
+    	
+    	do {
+    		cin >> option;
+    		
+    		if (option != 's' && option != 'S' && option != 'n' && option != 'N'){
+    			cout << "Ingrese SOLO letras (s/n): ";
+			}
+		} while (option != 's' && option != 'S' && option != 'n' && option != 'N');    	
+    } while ( option == 's' || option == 'S' );
     
-	return 0;
+    cout << "Programa finalizado.";
+    return 0;
 }
+
