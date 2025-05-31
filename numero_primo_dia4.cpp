@@ -13,7 +13,13 @@ int EsPrimo(int n){
 int main() {
 	int num;
 	cout << "Ingrese un numero para corroborar si es primo: ";
-	cin >> num;
+	do {
+		cin >> num;
+		if ( num <= 1 ) {
+			cout << "Ingrse SOLO un numero MAYOR que 1: ";
+		}
+	} while ( num <= 1 );
+	
 	if (EsPrimo(num)) {
 		cout << num << " si es primo." << endl;
 	} else {
