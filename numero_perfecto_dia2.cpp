@@ -10,7 +10,7 @@ int SumaDeDivisores(int n) {
 		}
 	}
 	
-	if ( sumdiv == n ) {
+	if (sumdiv == n) {
         return 1;
     } else {
         return 0;
