@@ -12,18 +12,33 @@ int EsPrimo(int n){
 
 int main() {
 	int num;
-	cout << "Ingrese un numero para corroborar si es primo: ";
+	char option;
 	do {
-		cin >> num;
-		if ( num <= 1 ) {
-			cout << "Ingrse SOLO un numero MAYOR que 1: ";
-		}
-	} while ( num <= 1 );
+		cout << "Ingrese un numero para corroborar si es primo: ";
+		do {
+			cin >> num;
+			if ( num <= 1 ) {
+				cout << "Ingrse SOLO un numero MAYOR que 1: ";
+			}
+		} while ( num <= 1 );
 	
-	if (EsPrimo(num)) {
-		cout << num << " si es primo." << endl;
-	} else {
-		cout << num << " no es primo." << endl;
-	}
+		if (EsPrimo(num)) {
+			cout << num << " si es primo." << endl;
+		} else {
+			cout << num << " no es primo." << endl;
+		}
+		
+		cout << "Desea volver a corroborar si es un numero primo? (s/n): ";
+    	do {
+    		cin >> option;
+    		
+    		if (option != 's' && option != 'S' && option != 'n' && option != 'N'){
+    			cout << "Ingrese SOLO letras (s/n): ";
+			}
+		} while (option != 's' && option != 'S' && option != 'n' && option != 'N');
+	} while ( option == 's' || option == 'S' );
+	
+	cout << "Programa finalizado.";
+	
 	return 0;
 }
