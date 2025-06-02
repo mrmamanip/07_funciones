@@ -23,18 +23,31 @@ int calcularMCM(int a, int b) {
 
 int main() {
     int num1, num2;
+    char option;
+	do {
+		cout << "Ingrese el primer numero: ";
+    	cin >> num1;
     
-    cout << "Ingrese el primer numero: ";
-    cin >> num1;
+    	cout << "Ingrese el segundo numero: ";
+    	cin >> num2;
     
-    cout << "Ingrese el segundo numero: ";
-    cin >> num2;
+    	cout << "El Maximo Comun Divisor (MCD) de " << num1 << " y " << num2 
+    	     << " es: " << calcularMCD(num1, num2) << endl;
     
-    cout << "El Maximo Comun Divisor (MCD) de " << num1 << " y " << num2 
-         << " es: " << calcularMCD(num1, num2) << endl;
+    	cout << "El Mínimo Común Multiplo (MCM) de " << num1 << " y " << num2 
+    	     << " es: " << calcularMCM(num1, num2) << endl;
+    	     
+		cout << "Desea volver a corroborar si dos numeros son amigos? (s/n): ";
+    	 
+    	do {
+    		cin >> option;
+    		
+    		if (option != 's' && option != 'S' && option != 'n' && option != 'N'){
+    			cout << "Ingrese SOLO letras (s/n): ";
+			}
+		} while (option != 's' && option != 'S' && option != 'n' && option != 'N');
+	} while ( option == 's' || option == 'S' );
     
-    cout << "El Mínimo Común Multiplo (MCM) de " << num1 << " y " << num2 
-         << " es: " << calcularMCM(num1, num2) << endl;
-    
+    cout << "Programa finalizado.";
     return 0;
 }
