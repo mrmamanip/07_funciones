@@ -19,9 +19,15 @@ double calcularSuma(double n) {
 
 int main() {
     int n;
-    cout << "Ingrese el valor de n: ";
-    cin >> n;
-
+    do {
+		cout << "Ingrese el valor de n: ";
+    	cin >> n;
+    
+    	if(n < 1) {
+    	    cout << "Error: n debe ser un entero positivo." << endl;
+    	}
+	} while (n < 1);
+	
     cout << "El resultado de la suma es: " << calcularSuma(n) << endl;
     
     return 0;
