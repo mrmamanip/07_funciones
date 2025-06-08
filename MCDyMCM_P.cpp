@@ -4,8 +4,13 @@ using namespace std;
 void MCDyMCM(int a, int b, int *mcd, int *mcm);
 
 int main (){
-	int x = 18, y = 24;
+	int x, y;
 	int rMCD, rMCM;
+	cout << "Ingrese dos numeros para hallar su MCD y MCM:" << endl;
+	cout << "Primer numero: ";
+	cin >> x;
+	cout << "Segundo numero: ";
+	cin >> y;
 	MCDyMCM(x, y, &rMCD, &rMCM);
 	cout<<"MCD: "<<rMCD<<endl;
 	cout<<"MCM: "<<rMCM<<endl;
