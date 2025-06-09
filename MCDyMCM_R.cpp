@@ -2,6 +2,7 @@
 using namespace std;
 
 void MCDyMCM(int a, int b, int &mcd, int &mcm);
+int ValorAbsoluto(int num);
 
 int main (){
 	int x, y;
@@ -11,10 +12,19 @@ int main (){
 	cin >> x;
 	cout << "Segundo numero: ";
 	cin >> y;
+	x = ValorAbsoluto(x);
+	y = ValorAbsoluto(y);
 	MCDyMCM(x, y, rMCD, rMCM);
 	cout<<"MCD: "<<rMCD<<endl;
 	cout<<"MCM: "<<rMCM<<endl;
 	return 0;
+}
+
+int ValorAbsoluto(int num){
+    if (num < 0) {
+        return (num * -1);
+    }
+    return num;
 }
 
 void MCDyMCM(int a, int b, int &mcd, int &mcm){
