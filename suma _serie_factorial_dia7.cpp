@@ -1,21 +1,8 @@
 #include <iostream>
 using namespace std;
 
-long long factorial(int num) {
-    long long resultado = 1;
-    for(int i = 1; i <= num; i++) {
-        resultado = resultado * i;
-    }
-    return resultado;
-}
-
-double calcularSuma(double n) {
-    double suma = 0.0;
-    for(int i = 1; i <= n; i++) {
-        suma = suma + (factorial(i) / (2.0 * i));
-    }
-    return suma;
-}
+long long factorial(int num);
+double calcularSuma(double n);
 
 int main() {
     int n;
@@ -45,4 +32,20 @@ int main() {
     
     cout << "Programa finalizado.";
     return 0;
+}
+
+long long factorial(int num) {
+    long long resultado = 1;
+    for(int i = 1; i <= num; i++) {
+        resultado = resultado * i;
+    }
+    return resultado;
+}
+
+double calcularSuma(double n) {
+    double suma = 0.0;
+    for(int i = 1; i <= n; i++) {
+        suma = suma + (factorial(i) / (2.0 * i));
+    }
+    return suma;
 }
